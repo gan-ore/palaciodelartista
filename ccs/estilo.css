@@ -1,0 +1,165 @@
+body{
+	background-color: ivory;
+	background-image: url(../img/fondo.png);
+	font-family: arial;
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#contenedor{
+	background-color: #ececc1;
+	width: 100%;
+	max-width: 990px;
+	padding: 1em;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+h1{
+	background-color: #FFA500;
+	color: #000B1E;
+	text-align: center;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li{
+	display: inline-block;
+	line-height: 30px;
+	background-color: #000B1E;
+	margin-right: 0.1em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+a{
+	border-radius: 5px;
+	margin: 1em;
+	color: ivory;
+	text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+	color: #FFA500;
+}
+
+#bloque_uno, #bloque_tres{
+    background-color: #e0b970;
+    padding: 1em;
+	margin: 0.2em;
+}
+
+#bloque_dos{
+	display: inline-flex;
+}
+
+article{
+    background-color: #dbb9b9;
+}
+
+.articuloestilos{
+	padding: 1em;
+	margin: 0.2em;
+}
+
+.col1{
+	width: 60%;
+}
+
+.col2{
+	width: 35%;
+}
+
+article img{
+	width: 100%;
+}
+
+h3{
+	background-color: #000B1E;
+	color: ivory;
+	text-align: center;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	margin-top: 0em;
+	margin-bottom: 0;
+}
+
+ul.lista_proyectos li{
+    background-color: #dbb9b9;
+	list-style-type: disc;
+}
+
+footer{
+	background-color: #FFA500;
+	padding-bottom: 0.3em;
+	padding-top: 0.3em;
+}
+
+address{
+	text-align: center;
+    font-style: normal;
+}
+
+address a{
+	color: black;
+	text-decoration: underline;
+	margin-left: 0;
+}
+
+#ocultarMostrar{
+	background-color: #FFA500;
+	border: none;
+	margin-right: 0.1em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+#botonDato{
+	background-color: #b45e25; /* Fondo oscuro como tu menú */
+    color: ivory; /* Texto claro como tus enlaces */
+    padding: 0.5em;
+	margin-top: 2em;
+	margin-bottom: 0.1em;
+	border: none;
+}
+
+
+/* MEDIA QUERY PARA MOBILE (1 COLUMNA) - Breakpoint a 480px */
+@media (max-width: 480px) {
+	li{
+		display: block;			/*verticaliza el menú*/
+		line-height: 30px;
+		background-color: #c05b08;
+		margin-right: 0.1em;			/*CHEQUEAR SI ESTO NO ES BASURAAAAAAAA*/
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
+	}
+    #bloque_dos {
+        flex-wrap: wrap; 		/*1 columna*/
+    }
+    
+    .articuloestilos {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+	.col1, .col2 {
+        width: 100%;
+    }
+    
+    
+    #contenedor {
+        padding: 0.5em; 		/*Menos padding para el telefono*/
+    }
+}
