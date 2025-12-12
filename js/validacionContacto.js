@@ -3,8 +3,8 @@
 // Esperar a que el DOM esté cargado
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del formulario
-    const formulario = document.getElementById('formularioContacto');
-    const mensajeExito = document.getElementById('mensajeExito');
+    const formulario = document.querySelector('#formularioContacto');
+    const mensajeExito = document.querySelector('#mensajeExito');
 
     // Verificar que el formulario existe
     if (!formulario) {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Validación en tiempo real para campo de email
-    const emailInput = document.getElementById('email');
+    const emailInput = document.querySelector('#email');
     if (emailInput) {
         emailInput.addEventListener('input', function() {
             if (emailInput.validity.typeMismatch) {
