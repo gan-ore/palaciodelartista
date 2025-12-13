@@ -16,11 +16,7 @@ body{
 .container{
 	/*background-color: #ececc1;*/
 	background-color: rgba(255, 223, 223, 0.689);
-	width: 100%;
-	max-width: 990px;
-	padding: 1em;
-	margin: 0 auto;
-	box-sizing: border-box;
+	max-width: 990px; 
 }
 
 header{
@@ -49,6 +45,20 @@ h1{
     background-color: #f8f9fa;
 }
 
+.col_raiz{
+	background-color:  rgba(156, 222, 196, 0.58);
+	margin: 0.5em;
+	padding: 0.2em;
+	padding-top: 0.2em;
+	/*justify-content: center;
+	text-align: center;*/
+}
+
+.btn-primary {
+    background-color: rgba(156, 222, 196, 0.58) !important;  /* Rojo coral */
+    border-color: rgba(156, 222, 196, 0.58) !important;
+	color: #000B1E !important;
+}
 
 footer{
 	background-color: rgba(231, 99, 114, 0.858);

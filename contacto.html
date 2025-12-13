@@ -8,111 +8,150 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <header>
-            <h1></h1>
-            <h2></h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li class="desplegable">
-                    <a href="universo1/index.html">Universo 1</a>
-                    <ul>
-                        <li><a href="universo1/index.html">La Creadora</a></li>
-                        <li><a href="universo1/ilustraciones.html">Ilustraciones</a></li>
-                        <li><a href="universo1/instalaciones.html">Instalaciones</a></li>
+        <!-- Navbar de Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- título del sitio -->
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="h5 mb-0">Palacio de la Artista</h1>
+                </a>
+
+                <!-- Botón para menú móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Inicio -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+
+                        <!-- Universo 1 - Dropdown / Desplegable -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="universo1/index.html" id="universo1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Universo 1
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="universo1Dropdown">
+                                <li><a class="dropdown-item" href="universo1/index.html">La Creadora</a></li>
+                                <li><a class="dropdown-item" href="universo1/ilustraciones.html">Ilustraciones</a></li>
+                                <li><a class="dropdown-item" href="universo1/instalaciones.html">Instalaciones</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Universo 2 - Dropdown / Desplegable-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="universo2/index.html" id="universo2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Universo 2
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="universo2Dropdown">
+                                <li><a class="dropdown-item" href="universo2/index.html">La observadora</a></li>
+                                <li><a class="dropdown-item" href="universo2/analisis_peliculas.html">Análisis de Películas</a></li>
+                                <li><a class="dropdown-item" href="universo2/recomendaciones.html">Recomendaciones</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Universo 3 - Dropdown / Desplegable-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="universo3/index.html" id="universo3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Universo 3
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="universo3Dropdown">
+                                <li><a class="dropdown-item" href="universo3/index.html">La lente</a></li>
+                                <li><a class="dropdown-item" href="universo3/foto_naturaleza.html">Foto Naturaleza</a></li>
+                                <li><a class="dropdown-item" href="universo3/foto_retrato.html">Foto Retrato</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Links carpeta raíz -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="juego/index.html">Juego</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="quiensoy.html">¿Quién soy?</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="desplegable">
-                    <a href="universo2/index.html">Universo 2</a>
-                    <ul>
-                        <li><a href="universo2/index.html">La observadora</a></li>
-                        <li><a href="universo2/analisis_peliculas.html">Análisis de Películas</a></li>
-                        <li><a href="universo2/recomendaciones.html">Recomendaciones</a></li>
-                    </ul>
-                </li>
-                <li class="desplegable">
-                    <a href="universo3/index.html">Universo 3</a>
-                    <ul>
-                        <li><a href="universo3/index.html">La lente</a></li>
-                        <li><a href="universo3/foto_naturaleza.html">Foto Naturaleza</a></li>
-                        <li><a href="universo3/foto_retrato.html">Foto Retrato</a></li>
-                    </ul>
-                </li>
-                <li><a href="juego/index.html">Juego</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="quiensoy.html">¿Quién soy?</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <!-- Formulario con Bootstrap -->
-                    <form id="formularioContacto" action="https://formspree.io/f/mqardowb" method="POST">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre *</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
-                            <div class="invalid-feedback">
-                                Por favor, ingresá tu nombre.
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="apellido" class="form-label">Apellido *</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido" required>
-                            <div class="invalid-feedback">
-                                Por favor, ingresá tu apellido.
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Mail *</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <div class="invalid-feedback">
-                                Por favor, ingresá un email válido.
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje *</label>
-                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-                            <div class="invalid-feedback">
-                                Por favor, escribí tu mensaje.
-                            </div>
-                        </div>
-
-                        <!-- Campo oculto para el asunto del mail -->
-                        <input type="hidden" name="_subject" value="Nuevo mensaje desde Palacio del Artista">
-                        
-                        <!-- Para redireccionar después del envío (opcional) -->
-                        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
-
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
-                        </div>
-                        
-                        <p class="text-muted mt-3"><small>* Campos obligatorios</small></p>
-                    </form>
-
-                    <!-- Mensaje de éxito (oculto inicialmente) -->
-                    <div id="mensajeExito" class="alert alert-success mt-4 d-none" role="alert">
-                        ¡Mensaje enviado con éxito! Te responderé a la brevedad.
-                    </div>
                 </div>
             </div>
-            <!-- Bootstrap JS + Popper -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    
-            <!-- JavaScript externo para validación -->
-            <script src="js/validacionContacto.js"></script>
+        </nav>
+        </header>
 
-    </main>
-    <footer>
-        <address>
-            <p><a href="mailto:lara.a.angelina@gmail.com"></a></p>
-        </address>
-    </footer>
+        <main>
+            <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <!-- Formulario con Bootstrap -->
+                        <form id="formularioContacto" action="https://formspree.io/f/mqardowb" method="POST">
+                            <fieldset>
+                                <legend class="h2 mb-4">¡Contactame!</legend>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre *</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingresá tu nombre.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="apellido" class="form-label">Apellido *</label>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingresá tu apellido.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Mail *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingresá un email válido.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje *</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Por favor, escribí tu mensaje.
+                                    </div>
+                                </div>
+
+                                <!-- Campo oculto para el asunto del mail -->
+                                <input type="hidden" name="_subject" value="Nuevo mensaje desde Palacio del Artista">
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-lg btn-primary">Enviar mensaje</button>
+                                </div>
+
+                                <p class="text-muted mt-3"><small>* Campos obligatorios</small></p>
+                            </fieldset>
+                        </form>
+
+                        <!-- Mensaje de éxito (oculto inicialmente) -->
+                        <div id="mensajeExito" class="alert alert-success mt-4 d-none" role="alert">
+                            ¡Mensaje enviado con éxito! Te responderé a la brevedad.
+                        </div>
+                    </div>
+                </div>
+                <!-- Bootstrap JS + Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    
+                <!-- JavaScript externo para validación -->
+                <script src="js/validacionContacto.js"></script>
+
+        </main>
+        <footer>
+            <address>
+                <p>algo<a href="mailto:lara.a.angelina@gmail.com"></a></p>
+            </address>
+        </footer>
     </div>
 </body>
 </html>
